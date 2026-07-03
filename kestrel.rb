@@ -5,20 +5,20 @@
 class Kestrel < Formula
   desc "Kestrel CLI — manage workflows from the terminal"
   homepage "https://usekestrel.ai"
-  version "0.15.0"
+  version "0.16.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/KestrelAI/kestrel-cli/releases/download/v0.15.0/kestrel_darwin_amd64.tar.gz"
-      sha256 "80e0be16d3bee5270bc6851e057a07d9ac2f72f470759ffaf1e7ae03c0163e9c"
+      url "https://github.com/KestrelAI/kestrel-cli/releases/download/v0.16.0/kestrel_darwin_amd64.tar.gz"
+      sha256 "ea1122883b5a1da6adcb8e5d2afa057f07386b55dc90733091600b10975b9e88"
 
       define_method(:install) do
         bin.install "kestrel"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/KestrelAI/kestrel-cli/releases/download/v0.15.0/kestrel_darwin_arm64.tar.gz"
-      sha256 "b2f6a4cdcc6015cee340adf7ec6e504b280a2d5f2b10bd569f0a01cf05ec2e7b"
+      url "https://github.com/KestrelAI/kestrel-cli/releases/download/v0.16.0/kestrel_darwin_arm64.tar.gz"
+      sha256 "43529f3c452936cd1dc47bbc05dae9d263fd8138be3436b1ed8a6d510d5db261"
 
       define_method(:install) do
         bin.install "kestrel"
@@ -28,15 +28,15 @@ class Kestrel < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/KestrelAI/kestrel-cli/releases/download/v0.15.0/kestrel_linux_amd64.tar.gz"
-      sha256 "87e2ef8ecc892f32ec384a34e5d15fe08b7f8999da06756ddde749d81be00182"
+      url "https://github.com/KestrelAI/kestrel-cli/releases/download/v0.16.0/kestrel_linux_amd64.tar.gz"
+      sha256 "03638c61862392997c404c654bf6e774c6c439f77ca38fea7df186270a376659"
       define_method(:install) do
         bin.install "kestrel"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/KestrelAI/kestrel-cli/releases/download/v0.15.0/kestrel_linux_arm64.tar.gz"
-      sha256 "8fee2d4aca846ce9e4a9cff8a2203bffe7a8178cb9f8340648bd4022dcfdc196"
+      url "https://github.com/KestrelAI/kestrel-cli/releases/download/v0.16.0/kestrel_linux_arm64.tar.gz"
+      sha256 "be85fa74d88aad5d00fa9fbdce27f1aacc79ac369a9a6ab743a24b2a7d25448e"
       define_method(:install) do
         bin.install "kestrel"
       end
